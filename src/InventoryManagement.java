@@ -64,7 +64,6 @@ public class InventoryManagement {
             if (products.get(i).equals(producto)) {
                 products.remove(i);
             }
-            System.out.println("La nueva cantidad de " + products.get(i) + " es: " + amount.get(i));
         }
     }
 
