@@ -49,9 +49,7 @@ public class InventoryManagement {
 
     private void ShowInventory() {
         for (int i = 0; i < products.size(); i++) {
-            for (int j = 0; j < amount.size(); j++) {
-                
-            }
+            System.out.println("Producto: " + products.get(i) + "Cantidad: " + amount.get(i));
         }
     }
 
