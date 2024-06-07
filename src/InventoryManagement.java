@@ -33,10 +33,10 @@ public class InventoryManagement {
                     UpdateAmount();
                     break;
                 case 4:
-
+                    DeleteProduct();
                     break;
                 case 5:
-
+                    ShowInventory();
                     break;
                 case 6:
                     System.out.println("Saliendo del sistema.");
@@ -47,19 +47,44 @@ public class InventoryManagement {
         }
     }
 
+    private void ShowInventory() {
+        for (int i = 0; i < products.size(); i++) {
+            for (int j = 0; j < amount.size(); j++) {
+                
+            }
+        }
+    }
+
+    private void DeleteProduct() {
+        Scanner input = new Scanner(System.in);
+        String producto;
+
+        System.out.println("Ingresa el producto a eliminar: ");
+        producto = input.next();
+
+        for (int i = 0; i <= products.indexOf(producto); i++) {
+            if (products.get(i).equals(producto)) {
+                products.remove(i);
+            }
+            System.out.println("La nueva cantidad de " + products.get(i) + " es: " + amount.get(i));
+        }
+    }
+
     private void UpdateAmount() {
         Scanner input = new Scanner(System.in);
         String producto;
 
         System.out.println("Ingresa el producto a actualizar su cantidad: ");
         producto = input.next();
+        int cantidad = 0;
 
         for (int i = 0; i <= products.indexOf(producto); i++) {
             if (products.get(i).equals(producto)) {
-                for (int j = 0; j < ; j++) {
-                    
-                }
+                System.out.println("Ingresa la nueva cantidad: ");
+                cantidad  = input.nextInt();
+                amount.add(i, cantidad);
             }
+            System.out.println("La nueva cantidad de " + products.get(i) + " es: " + amount.get(i));
         }
     }
 
